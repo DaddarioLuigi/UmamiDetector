@@ -9,13 +9,13 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
 #open csv
-df = pd.read_csv("umami_dataset_scripted_test.csv", delimiter=';')
+df = pd.read_csv("C:/Users/info/PycharmProjects/UmamiDetector/data/processed_dataframe.csv", delimiter=',')
 
 #isolo il target
-y = df['judgment']
+y = df['clusters']
 
 #cancello le colonne che non mi servono per la predizione
-columns_to_be_deleted = ['name', 'region', 'group', 'source', 'judgment']
+columns_to_be_deleted = ['clusters']
 df.drop(columns_to_be_deleted, axis=1, inplace=True)
 
 #features
@@ -37,6 +37,7 @@ print(f'Train {acc_train} Test {acc_test}')
 
 #test della predizione
 prediction_test = np.matrix([0, 77, 579.2, 4810.6, 308, 229.6, 0, 0, 0, 179.2, 660.8, 638.4, 0, 408.8, 408.8, 968.8, 0, 0, 0, 812, 280, 0,0])
+#prediction_test = np.matrix([])
 prediction = model.predict(prediction_test)
 
 print(f'{prediction}')
