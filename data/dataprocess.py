@@ -21,11 +21,12 @@ def ImputeDataframe(DataFrame):
 
 def MakeClusters(DataFrame):
     kmeans = cluster.KMeans(n_clusters=5, init="k-means++")
+
     """
     Sto utilizzando solo queste 3 variabili per clusterizzare perchè ho assunto che il glutammato sia indicatore diretto
     di umami e che l'inosinato e il guanilato siano responsabili diretti della crescita del glutammato. Quindi, ipoteticamente:
 
-    D(I) x D(G) x D(Gl) --> Maggiore umami
+    D(I) x D(G) x D(Gl) --> +Umami
 
     """
     kmeans = kmeans.fit(DataFrame[[0, 1, 3]])
@@ -33,12 +34,20 @@ def MakeClusters(DataFrame):
     # aggiungo la colonna al dataset
     DataFrame['clusters'] = kmeans.labels_
 
-    #generating plots
-    plot = sns.scatterplot(x=DataFrame[0], y=DataFrame[1], hue=DataFrame['clusters'], data=DataFrame)
+    #faccio due join plot guanilato-glutammato inosinato-glutammato
+    plot = sns.scatterplot(x=DataFrame[0], y=DataFrame[3], hue=DataFrame['clusters'], data=DataFrame)
     plot.set_xlabel("Inosinato")
-    plot.set_ylabel("Guanilato")
+    plot.set_ylabel("Glutammato")
     fig = plot.get_figure()
-    fig.savefig("C:/Users/info/PycharmProjects/UmamiDetector/visualization/scatteradditives.png")
+    fig.savefig("C:/Users/info/PycharmProjects/UmamiDetector/visualization/inosatojoinglutammato.png")
+    plt.show()
+
+    # faccio due join plot guanilato-glutammato inosinato-glutammato
+    plot = sns.scatterplot(x=DataFrame[1], y=DataFrame[3], hue=DataFrame['clusters'], data=DataFrame)
+    plot.set_xlabel("Guanilato")
+    plot.set_ylabel("Glutammato")
+    fig = plot.get_figure()
+    fig.savefig("C:/Users/info/PycharmProjects/UmamiDetector/visualization/guanilatojoinglutammato.png")
     plt.show()
 
     fig_2 = plt.figure()
@@ -58,4 +67,3 @@ def MakeClusters(DataFrame):
     plt.show()
 
     return DataFrame
-
