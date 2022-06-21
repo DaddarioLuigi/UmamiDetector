@@ -4,7 +4,7 @@
 Lo scopo del progetto è quello di studiare la formazione del gusto nel cibo. Per fare questo mi avvalgo di un dataset trovato su kaggle, denominato “Umami (savoriness) in food”. Assumiamo che il gusto che vogliamo studiare sia “umami”, e, attenendoci a quanto letto sulle info del dataset e grazie ad altre rilevanze scientifiche sappiamo che:
 “Amino acids in foods have two types. The first type is amino acids that are joined to build proteins. The other type is free amino acids which are dispersed. While protein has no taste, free amino acids have a taste. Free glutamate is one of the representative umami taste substances. “
 -Gonzalo Recio in kaggle
-<<<<<<< HEAD
+
 
 1)	$U(x) = fa + (IsG)$  Umami taste
 Aldilà dell'utilizzo corretto degli operatori dell'equazione definita sopra, parto con l'ipotesi che il gusto umami possa essere formato dall'interazione di Inosinato e Guanilato (s rappresenta l'operatore che definisce l'interazione), dagli amminoacidi liberi e da una f, che potrebbe essere una costante o un'altra funzione da scoprire.
@@ -39,8 +39,5 @@ I risultati, soprattutto della predizione non sono molto confortanti, anche se f
 Un dataset completo e senza troppi valori mancanti potrebbe aiutare sicuramente molto, inoltre, per ora, mi limito a dire che si potrebbe 
 pensare di estendere la questione a tutti gli altri gusti e magari, costruito un modello completo, pensare a sistemi basati su conoscenza,
 capaci di ragionare vincolati ai risultati appresi durante il lavoro di machine learning.
-=======
 
-1)	$U(x) = fa + (IsG)$  Umami taste
-Aldilà dell'utilizzo corretto degli operatori dell'equazione definita sopra, parto con l'ipotesi che il gusto umami possa essere formato dall'interazione di Inosinato e Guanilato (s rappresenta l'operatore che definisce l'interazione), dagli amminoacidi liberi e da una f, che potrebbe essere una costante o un'altra funzione da scoprire.
->>>>>>> 65b6ec6df7cbfa931b18ac3b77380cf719188254
+
