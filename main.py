@@ -5,6 +5,7 @@
 import pandas as pd
 
 import data.dataprocess
+import numpy as np
 from data import *
 import models as model
 
@@ -16,38 +17,5 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    scelta = -1
-    while (scelta != 0):
-        print("-------------------------")
-        print("0. Uscita")
-        print()
-        print("1. Predici il valore del glutammato")
-        print("2. Classifica un cibo")
-        print("3. Effettua una classificazione con HistGradientClassifier")
-        print("4. Regressione con HistGradientRegressor")
-        print("5. Download reports and plots")
-        print("...")
-        print("...")
-        print()
-        scelta = int(input("Scegli: "))
-        print("------------------------")
-        if (scelta == 0):
-            pass
-        elif (scelta == 1):
-            print("Per predire il valore del glutammato dovrai inserire 23 features. E' possibile utilizzare"
-                  "il file README per poter capire come fare.")
-        elif (scelta == 2):
-            print("Per classificare un cibo dovrai inserire 23 features. E' possibile"
-                  "utilizzare il file README per poter capire come fare.")
-        elif (scelta == 3):
-            print("Puoi utilizzare questa funzione per poter confrontare gli algoritmi di classificazione")
-        elif (scelta == 4):
-            print("Puoi utilizzare questa funzione per poter confrontare gli algoritmi di regressione")
-        elif (scelta == 5):
-            print("Reports downloading...")
-        else:
-            print("Non capisco...")
-
-
-print("Arrivederci! Torna su UmamiDetector")
+    print(README.md)
         # See PyCharm help at https://www.jetbrains.com/help/pycharm/
