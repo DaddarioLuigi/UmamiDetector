@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 #open csv
-df = pd.read_csv("C:/Users/info/PycharmProjects/UmamiDetector/data/processed_dataframe.csv", delimiter=',')
+df = pd.read_csv("C:/Users/Luigi Daddario/Desktop/UmamiDetector-main/data/processed_dataframe.csv", delimiter=',')
 
 #isolo il target
 y = df['clusters']
